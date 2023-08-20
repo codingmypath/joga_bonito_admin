@@ -234,10 +234,10 @@ function Categories({swal}) {
                 </thead>
                 <tbody>
                     {categories.length > 0 && categories.map(category => (
-                        <tr key={i}>
+                        <tr key={category.id}>
                             <td>{category.name}</td>
                             <td>{category?.parent?.name}</td>
-                            <td key={i}>
+                            <td>
                                 <button onClick={() => editCategory(category)} 
                                 className="btn-default mr-1">
                                     Edit
@@ -255,5 +255,5 @@ function Categories({swal}) {
 }
 
 export default  withSwal(({swal}, ref) => (
-    <Categories swal = {swal} />
+    <Categories  swal = {swal} />
 ));
