@@ -2,6 +2,7 @@ import { createFactory, use, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Spinner from "./Spinner";
 import { ReactSortable } from "react-sortablejs";
+import Image from "next/image";
 
 export default function ProductForm({
     _id, 
@@ -255,18 +256,18 @@ export default function ProductForm({
                         onChange={ev => setCategory(ev.target.value)} required>
                     <option value="">Uncategorized</option>
                     {categories.length > 0 && categories.map(c => (
-                        <option value={c._id}>{c.name}</option>
+                        <option key={c._id} value={c._id}>{c.name}</option>
                     ))}
                 </select>
                 {propertiesToFill.length > 0 && propertiesToFill.map(p => (
-                    <div className="">
+                    <div key={i} className="">
                         <label>{p.name[0].toUpperCase()+p.name.substring(1)}</label>
                         <div>
                             <select value={productProperties[p.name]} 
                                     onChange={ev => setProductProp(p.name,ev.target.value)}>
                                     <option value="">Choose one</option>
                                     {p.values.map(v => (
-                                    <option value={v}>{v}</option>
+                                    <option key={i} value={v}>{v}</option>
                                     ))}
                             </select>
                         </div>
@@ -279,7 +280,7 @@ export default function ProductForm({
                     <ReactSortable list={images} className="flex flex-wrap" setList={updateImagesOrder}>
                         {!!images?.length && images.map(link =>( 
                             <div key={link} className="h-24 bg-white p-4 shadow-sm rounded-sm border border-gray-200">
-                                <img src={link} alt="" className="rounded-lg" />
+                                <Image src={link} alt="" className="rounded-lg" />
                             </div>
                         ))}
                     </ReactSortable>
