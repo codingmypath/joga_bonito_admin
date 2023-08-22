@@ -1,5 +1,6 @@
 'use client';
 import AppLayout from "@../../components/AppLayout"
+import Dashboard from "@/components/Dashboard";
 import {useSession} from "next-auth/react";
 import Image from "next/image";
 
@@ -16,7 +17,9 @@ export default function Home() {
           {session?.user?.name}
         </span>
       </div>
-  
+    </div>
+    <div>
+      <Dashboard />
     </div>
   </AppLayout>
 }
