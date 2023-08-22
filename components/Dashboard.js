@@ -39,7 +39,7 @@ return (
             </div>
            
             {orders.length > 0 && orders.slice(0, 3).map(order => (
-                <div>
+                <div key={order.createdAt}>
                 <div className="font-semibold">
                     {order.name}
                 </div>
