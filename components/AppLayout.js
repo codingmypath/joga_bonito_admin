@@ -2,6 +2,7 @@
 import { useSession, signIn, signOut } from "next-auth/react"
 import { useState } from "react";
 import Nav from "./Nav";
+import LoginForm from "./LoginForm";
 
 
 
@@ -10,11 +11,11 @@ export default function AppLayout({children}) {
   const {data: session } = useSession();
   if (!session) {
     return (
-      <div className={'bg-backG w-screen h-screen flex items-center'}>
-        <div className="text-center w-full">
-          <button onClick={() => signIn('google')} className="bg-white p-2 rounded-lg">Login with Google</button>
+        <div className={'bg-backG w-screen h-screen flex items-center'}>
+          <div className="text-center w-50 m-auto bg-white">
+            <LoginForm />
+          </div>
         </div>
-      </div>
     )
   }
 
