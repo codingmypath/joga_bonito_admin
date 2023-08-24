@@ -26,9 +26,6 @@ export default function ProductForm({
 
 
     useEffect(() => {
-        // axios.get('/api/categories').then(result => {
-        //     result.data;
-        // })
         fetch("/api/categories")
         .then(response => response.json())
             .then(data => {
@@ -38,82 +35,7 @@ export default function ProductForm({
 
     }, [])
 
-//  fetch("api/categories")
-//         .then(response => response.json())
-//             .then(data => {
-//                 setCategories(data);
-//         })
-//         .catch(error => console.error(error));
-
-
-
     console.log({_id});
-    // async function createProduct(ev) {
-    //     ev.preventDefault();
-    //     const data = {title, description, price};
-    //     await axios.post('/app/products', data);
-    // }
-
-
-    // const createProduct = async (ev) => {
-    //     ev.preventDefault();
-    //     const data = {title, description, price};
-    //     const response = await fetch('/api/products', data);
-    //     response.json()
-    // }
-
-
-    // async function createProduct(ev) {
-    //     ev.preventDefault();
-    //     const data = {title, description, price};
-    //     await fetch('/api/form', 
-    //     {
-    //         method: 'POST',
-    //         body: JSON.stringify(data),
-    //         headers: {
-    //             'Content-Type': 'application/json'
-    //           },
-    //     } )
-    // }
-
-
-    //THIS ONE WORKED BEFORE I MADE CHANGES RIGHT BELOW THIS BLOCK
-    // const saveProduct = async (ev) => {
-    //     // Stop the form from submitting and refreshing the page.
-    //     ev.preventDefault();
-
-     
-    //     // Get data from the form.
-    //     const data = {title, description, price};
-     
-    //     // Send the data to the server in JSON format.
-    //     const JSONdata = JSON.stringify(data)
-     
-    //     // API endpoint where we send form data.
-    //     const endpoint = '/api/products'
-     
-    //     // Form the request for sending data to the server.
-    //     const options = {
-    //       // The method is POST because we are sending data.
-    //       method: 'POST',
-    //       // Tell the server we're sending JSON.
-    //       headers: {
-    //         'Content-Type': 'application/json',
-    //       },
-    //       // Body of the request is the JSON data we created above.
-    //       body: JSONdata,
-    //     }
-
-    //     // Send the form data to our forms API on Vercel and get a response.
-    //     const response = await fetch(endpoint, options)
- 
-    //     // Get the response data from server as JSON.
-    //     // If server returns the name submitted, that means the form works.
-    //     const result = await response.json()
-    //     console.log(`Is this your full name: ${result.data}`)
-    //     setGoToProducts(true);
-    // }
-    
 
     const saveProduct = async (ev) => {
         // Stop the form from submitting and refreshing the page.
@@ -222,26 +144,7 @@ export default function ProductForm({
             catInfo = parentCat;
         }
     }
-
-
-
-    // async function createProduct(ev) {
-    //     ev.preventDefault();
-    //     const data = {title, description, price};
-    //     const response = await fetch('/api/route', data);
-    //     console.log(response)
-    //     return JSON.stringify(response);
-    // }
-
- 
-    // async function createProduct(ev) {
-    //   const formData = await request.formData()
-    //   const name = formData.get('name')
-    //   const email = formData.get('email')
-    //   return NextResponse.json({ name, email })
-    // }
         
-
     return (
             <form onSubmit={saveProduct}>
                 <label>Product name</label>
