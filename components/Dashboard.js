@@ -1,5 +1,7 @@
 'use client'
 import { useEffect, useState } from "react";
+import YearlyChart from "./YearlyChart";
+import SalesChart from "./SalesChart";
 
 
 
@@ -29,6 +31,7 @@ useEffect( () => {
 }, []);
 
 return (
+    <div className="grid grid-1 w-full">
     <div className="grid grid-cols-1 lg:grid-cols-3 w-full gap-2 ">
         <div className="w-full bg-white rounded p-3 mt-3 sm:w-full md:w-full lg:w-full shadow">
             <div className="flex justify-between">
@@ -72,5 +75,10 @@ return (
                 {products.length}
             </div>
         </div>
+    </div>
+    <div className="grid grid-3 grid-cols-1 w-full lg:grid-cols-2 gap-2">
+            <YearlyChart />
+            <SalesChart />
+    </div>
     </div>
 )}
