@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 
 export default function OrdersPage() {
     const [orders, setOrders] = useState([]);
+    console.log("orders,", orders)
     useEffect(() => {
         // axios.get('/api/orders').then(response => {
         //     setOrders(response.data);
@@ -24,21 +25,21 @@ export default function OrdersPage() {
             <thead>
                 <tr>
                     <th>Date</th>
-                    <th>Paid</th>
                     <th>Recipient</th>
+                    {/* <th>Paid</th> */}
                     <th>Products</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody className="text-center">
                 {orders.length > 0 && orders.map(order => (
                     <tr key={order.createdAt}>
                         <td>{(new Date(order.createdAt)).toLocaleString()}</td>
                         <td>{order.name} {order.email}<br />
                         {order.city} {order.zipCode}
                         </td>
-                        <td className={order.paid ? 'text-green-600' : 'text-red-600'}>
+                        {/* <td className={order.paid ? 'text-green-600' : 'text-red-600'}>
                             {order.paid ? 'YES': 'NO'}
-                        </td>
+                        </td> */}
                         <td>
                             {order.line_items.map(l => (
                                 <>
