@@ -1,3 +1,18 @@
+  
+<img src="public/joga_logo.png" width="128"/>
+
+
+# Joga Bonito Admin
+A full stack ecommerce admin website where you can add products, look at orders, and find many different statistics. 
+
+---
+
+## How It's Made
+
+Next.js, React, Node.js, Express, AWS S3, MongoDB, and Tailwind CSS
+
+---
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
