@@ -14,12 +14,22 @@ Next.js, React, Node.js, Express, AWS S3, MongoDB, and Tailwind CSS
 ---
 
 
-## Getting Started
+## How to Use
+
+If the user has admin access, he is able to login. </br>
+Login with demo: </br>
+Email: admin@jogabonito.com  </br>
+Password: demo123
+
+
+<img src="https://i.ibb.co/VBR4t71/econ-admin-ss1.png" width="1000"/>
 
 The home menu has a lot of information about the store. The user can see the last 3 current orders, total orders, and total products. 
 The can also see a graph that shows monthly orders placed and monthly sales. 
 
+
 <img src="https://i.ibb.co/sq89TBg/ecom-admin-ss.png" width="1000"/>
+
 
 
 ---
