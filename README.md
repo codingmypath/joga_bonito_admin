@@ -13,6 +13,17 @@ Next.js, React, Node.js, Express, AWS S3, MongoDB, and Tailwind CSS
 
 ---
 
+
+## Getting Started
+
+The home menu has a lot of information about the store. The user can see the last 3 current orders, total orders, and total products. 
+The can also see a graph that shows monthly orders placed and monthly sales. 
+
+<img src="https://i.ibb.co/sq89TBg/ecom-admin-ss.png" width="1000"/>
+
+
+---
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -32,6 +43,8 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+
+
 
 ## Learn More
 
